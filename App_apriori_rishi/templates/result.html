@@ -1,14 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>Apriori Results</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-  </style>
+    <meta charset="UTF-8">
+    <title>Apriori Results</title>
+    <style>
+        body {
+            font-family: Times New Roman, Serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .results {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .results p {
+            margin: 10px 0;
+        }
+        .frequent-itemsets {
+            font-size: 16px;
+            line-height: 1.5;
+            word-wrap: break-word; /* Breaks long words if necessary */
+        }
+    </style>
 </head>
 <body>
+    <h1>Apriori Algorithm Results</h1>
+    <div class="results">
+        <p><strong>Minimal Support:</strong> {{ minimal_support }}</p>
+        <p><strong>Total running time:</strong> {{ execution_time }}</p>
+        <p><strong>End - total items:</strong> {{ total_count }}</p>
+        <h3>Itemsets:</h3>
+        <p class="frequent-itemsets">{{ result }}</p>
+    </div>
+    <a href="/">Back to Home</a>
 </body>
 </html>
