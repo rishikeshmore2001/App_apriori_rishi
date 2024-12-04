@@ -1,17 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>Check Apriori Algorithm</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Times New Roman'; color: #000000; -webkit-text-stroke: #000000; min-height: 15.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <title>Check Apriori Algorithm</title>
+    <style>
+        body {
+            font-family: Times New Roman, Serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1"></span><br></p>
+    <h1>Check Apriori Algorithm</h1>
+    
+    <form id="uploadForm" action="/process_csv" method="POST" enctype="multipart/form-data">
+        <label for="file">Input File:</label>
+        <input type="file" id="file" name="file" accept=".csv" required><br><br>
+        
+        <label for="min_support">Minimal Support:</label>
+        <input type="number" id="min_support" name="min_support" value="20" required><br><br>
+        
+        <button type="submit">Upload and Run Apriori Algorithm</button>
+    </form>
 </body>
 </html>
