@@ -2,42 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Check the Apriori Results</title>
+    <title>Apriori Results</title>
     <style>
         body {
-            font-family: Times New Roman, Serif;
+            font-family: Arial, sans-serif;
             margin: 20px;
-        }
-        h1 {
             text-align: center;
         }
         .results {
+            max-width: 600px;
             margin: 0 auto;
-            max-width: 800px;
-            padding: 20px;
-            border: 1px solid #ddd;
+            padding: 15px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            background: #f9f9f9;
+            background: #f7f7f7;
+            text-align: left;
         }
         .results p {
-            margin: 10px 0;
+            margin: 8px 0;
         }
         .frequent-itemsets {
-            font-size: 16px;
-            line-height: 1.5;
-            word-wrap: break-word; /* Breaks long words if necessary */
+            word-wrap: break-word;
         }
     </style>
 </head>
 <body>
-    <h1>Apriori Algorithm Results</h1>
+    <h1>Apriori Results</h1>
     <div class="results">
         <p><strong>Minimal Support:</strong> {{ minimal_support }}</p>
-        <p><strong>Total running time:</strong> {{ execution_time }}</p>
-        <p><strong>End - total items:</strong> {{ total_count }}</p>
+        <p><strong>Execution Time:</strong> {{ execution_time }}</p>
+        <p><strong>Total Items:</strong> {{ total_count }}</p>
         <h3>Itemsets:</h3>
         <p class="frequent-itemsets">{{ result }}</p>
     </div>
+    <br>
     <a href="/">Back</a>
 </body>
 </html>
+
