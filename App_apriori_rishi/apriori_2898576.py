@@ -62,32 +62,6 @@ def get_maximal_frequent_itemsets(frequent_itemsets):
 def index():
     return render_template('index.html')
 
-# @app.route('/process_csv', methods=['POST'])
-# def process_csv():
-#     file = request.files['file']
-#     min_support = int(request.form['min_support'])
-#     # Parse CSV file
-#     stream = io.StringIO(file.stream.read().decode("UTF8"), newline=None)
-#     csv_input = csv.reader(stream)
-#     transactions = [row for row in csv_input]
-#     # Measure execution time
-#     start_time = time.time()
-#     frequent_itemsets = apriori(transactions, min_support)
-#     end_time = time.time()
-#     execution_time = end_time - start_time
-#     maximal_frequent_itemsets = get_maximal_frequent_itemsets(frequent_itemsets)
-#     maximal_frequent_itemsets.sort(key=lambda x: (len(x), x))
-#     # Calculate total count
-#     total_count = len(maximal_frequent_itemsets)
-#     # Format frequent itemsets output
-#     formatted_output = [f"{{{','.join(map(str, itemset))}}}" for itemset in maximal_frequent_itemsets]
-#     return jsonify({
-#         "minimal_support": min_support,
-#         "execution_time": f"{execution_time:.2f} seconds",
-#         "total_count": total_count,
-#         "result": formatted_output
-#     })
-
 @app.route('/process_csv', methods=['POST'])
 def process_csv():
     file = request.files['file']
